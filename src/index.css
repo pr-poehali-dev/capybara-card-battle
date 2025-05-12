@@ -1,6 +1,5 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -75,25 +74,33 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-opensans;
+    @apply bg-background text-foreground;
+    font-family: "Open Sans", sans-serif;
     background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%238DC26F" fill-opacity="0.3"/><path d="M0 0L100 100M100 0L0 100" stroke="%23A67C52" stroke-width="1" stroke-opacity="0.1"/></svg>');
     background-size: 100px 100px;
   }
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-rubik font-bold;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Rubik", sans-serif;
+    font-weight: bold;
   }
-  
+
   .card-element {
     perspective: 1000px;
     transform-style: preserve-3d;
     transition: transform 0.6s ease;
   }
-  
+
   .card-element.flipped {
     transform: rotateY(180deg);
   }
-  
-  .card-front, .card-back {
+
+  .card-front,
+  .card-back {
     backface-visibility: hidden;
     position: absolute;
     top: 0;
@@ -101,7 +108,7 @@
     width: 100%;
     height: 100%;
   }
-  
+
   .card-back {
     transform: rotateY(180deg);
   }
@@ -109,21 +116,21 @@
   /* Элементные стили для карт */
   .element-water {
     @apply bg-water text-white shadow-lg shadow-water/50;
-    background-image: linear-gradient(135deg, #3498DB, #2980B9);
+    background-image: linear-gradient(135deg, #3498db, #2980b9);
   }
-  
+
   .element-earth {
     @apply bg-earth text-black shadow-lg shadow-earth/50;
-    background-image: linear-gradient(135deg, #F1C40F, #D4AC0D);
+    background-image: linear-gradient(135deg, #f1c40f, #d4ac0d);
   }
-  
+
   .element-fire {
     @apply bg-fire text-white shadow-lg shadow-fire/50;
-    background-image: linear-gradient(135deg, #E74C3C, #C0392B);
+    background-image: linear-gradient(135deg, #e74c3c, #c0392b);
   }
-  
+
   .element-air {
     @apply bg-air text-white shadow-lg shadow-air/50;
-    background-image: linear-gradient(135deg, #95A5A6, #7F8C8D);
+    background-image: linear-gradient(135deg, #95a5a6, #7f8c8d);
   }
 }
